@@ -87,9 +87,9 @@ load_rama_refs_from_paths <- function(gen_path, gly_path, prepro_path, pro_path)
       mutate(
         panel = recode(k,
                        "Gen"  = "General",
-                       "Gly"  = "Glycin",
-                       "PreP" = "Pre-prolin",
-                       "Pro"  = "Prolin"),
+                       "Gly"  = "Glycine",
+                       "PreP" = "Pre-proline",
+                       "Pro"  = "Proline"),
         level = bin_density(density, style$bounds)
       )
   }))
@@ -114,17 +114,17 @@ plot_rama_backgrounds <- function(bg_df) {
     "General:mid"      = rama_styles$Gen$cols[2],
     "General:high"     = rama_styles$Gen$cols[3],
     
-    "Glycin:low"       = rama_styles$Gly$cols[1],
-    "Glycin:mid"       = rama_styles$Gly$cols[2],
-    "Glycin:high"      = rama_styles$Gly$cols[3],
+    "Glycine:low"       = rama_styles$Gly$cols[1],
+    "Glycine:mid"       = rama_styles$Gly$cols[2],
+    "Glycine:high"      = rama_styles$Gly$cols[3],
     
-    "Pre-prolin:low"   = rama_styles$PreP$cols[1],
-    "Pre-prolin:mid"   = rama_styles$PreP$cols[2],
-    "Pre-prolin:high"  = rama_styles$PreP$cols[3],
+    "Pre-proline:low"   = rama_styles$PreP$cols[1],
+    "Pre-proline:mid"   = rama_styles$PreP$cols[2],
+    "Pre-proline:high"  = rama_styles$PreP$cols[3],
     
-    "Prolin:low"       = rama_styles$Pro$cols[1],
-    "Prolin:mid"       = rama_styles$Pro$cols[2],
-    "Prolin:high"      = rama_styles$Pro$cols[3]
+    "Proline:low"       = rama_styles$Pro$cols[1],
+    "Proline:mid"       = rama_styles$Pro$cols[2],
+    "Proline:high"      = rama_styles$Pro$cols[3]
   )
   
   ggplot(bg_df, aes(phi, psi)) +
